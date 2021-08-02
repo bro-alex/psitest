@@ -1,0 +1,102 @@
+@font-face {
+    font-family: ProximaNovaCond-Bold;
+    src: url(fonts/ProximaNovaCond-Bold.ttf);
+}
+
+@font-face {
+    font-family: ProximaNova-Extrabld;
+    src: url(fonts/ProximaNova-Extrabld.ttf);
+}
+
+@font-face {
+    font-family: ProximaNova-Light;
+    src: url(fonts/ProximaNova-Light.ttf);
+}
+
+@font-face {
+    font-family: ProximaNova-Semibold;
+    src: url(fonts/ProximaNova-Semibold.ttf);
+}
+
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url(fonts/ProximaNova-Regular.ttf);
+}
+
+body {
+    text-decoration: none;
+    font-family: ProximaNova-Light;
+    display: flex;
+  
+}
+
+.form_register {
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    
+}
+
+.subtesttext {
+    margin-right: 5%;
+    
+    text-align: justify;
+}
+
+.form {
+    display: flex;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    flex-direction: column;
+    width: 1000px;
+}
+
+.input {
+        
+        background-color: #9059FF;
+        color: aliceblue;
+        width: 100%;
+        height: 50px;
+        
+        font-family: ProximaNova-Extrabld;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+    
+}
+
+.inbtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 2%;
+}
+
+.intext {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    
+}
+
+.namein {
+    width: 10%;
+    margin-right: 10px;
+}
+
