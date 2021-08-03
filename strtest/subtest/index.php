@@ -9,7 +9,7 @@
                         <input class="intext" type="text" name="name" required="required" placeholder="Пример: Антонина Фролова" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите ваше имя'">
 </div>
                 
-ТЕСТ
+
                 
                     <div class="name"> <div class="namein">Телефон: </div>
                         <input id="phone" class="intext" type="text" name="telephone" required="required" placeholder="Пример: +79091234556" onfocus="this.value = '+7'">
