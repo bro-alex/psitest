@@ -1,0 +1,12 @@
+a.text:active,
+a.text:hover,
+a.text {
+  text-decoration: none;
+  color: #666;
+  font-size: large;
+  text-align: center;
+}
+
+.pacient {
+    margin-top: 50px;
+}

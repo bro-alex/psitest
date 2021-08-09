@@ -1,0 +1,38 @@
+{
+  "ftp://141.8.193.236:21@f0554939": {
+    ".bash_logout": {
+      "type": "-",
+      "size": 18,
+      "lmtime": 0,
+      "modified": false
+    },
+    ".bash_profile": {
+      "type": "-",
+      "size": 246,
+      "lmtime": 0,
+      "modified": false
+    },
+    ".bashrc": {
+      "type": "-",
+      "size": 393,
+      "lmtime": 0,
+      "modified": false
+    },
+    ".i18n": {
+      "type": "-",
+      "size": 19,
+      "lmtime": 0,
+      "modified": false
+    },
+    ".zshrc": {
+      "type": "-",
+      "size": 658,
+      "lmtime": 0,
+      "modified": false
+    },
+    "domains": {},
+    "test": {},
+    "tmp": {}
+  },
+  "$version": 1
+}
