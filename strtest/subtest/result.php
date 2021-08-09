@@ -7,6 +7,9 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="style-result.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 <?php
@@ -39,7 +42,7 @@ while($row = $result->fetch_assoc())// получаем все строки в �
 echo '<tr>'.'<th scope="row">'.$row['ID'].'</th>'.'<td>'.$row['DATE'].'</td>'.'<td>'.$row['NAME'].'</td>'.'<td>'.$row['PHONE'].'</td>'.'<td>'.$row['MAIL'].'</td>';
 echo '<td>'.'<form action="delete.php" method="post">';
 echo '<input type="hidden" name="ID" value="'.$row['ID'].'">';
-echo '<input type="submit" value="Удалить" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">'.'</form></td>'.'</tr>';// выводим данные
+echo '<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Удалить</button>'.'</form></td>'.'</tr>';// выводим данные
 }
 $mysqli->close();
 ?>
@@ -57,7 +60,8 @@ $mysqli->close();
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">НЕТ</button>
-        <button type="button" class="btn btn-primary">ДА</button>
+
+        <input type="input" type="submit" value="Удалить" class="btn btn-warning">
       </div>
     </div>
   </div>
