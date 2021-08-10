@@ -40,12 +40,14 @@ $result = $mysqli->query('SELECT * FROM `users`'); // запрос на выбо
 while($row = $result->fetch_assoc())// получаем все строки в цикле по одной
 {
 echo '<tr>'.'<th scope="row">'.$row['ID'].'</th>'.'<td>'.$row['DATE'].'</td>'.'<td>'.$row['NAME'].'</td>'.'<td>'.$row['PHONE'].'</td>'.'<td>'.$row['MAIL'].'</td>';
-echo '<td>'.'<form action="delete.php" method="post">';
+echo '<td>'.'<form method="POST">';
 echo '<input type="hidden" name="ID" value="'.$row['ID'].'">';
 echo '<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Удалить</button>'.'</form></td>'.'</tr>';// выводим данные
 }
 $mysqli->close();
-?>
+?>  
+</tbody>
+</table>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -60,14 +62,17 @@ $mysqli->close();
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">НЕТ</button>
-
+        <form action="delete.php" method="post">
+        <input type="hidden" name="ID" value="<?php echo $_POST['ID']; ?>">
+        
         <input type="input" type="submit" value="Удалить" class="btn btn-warning">
+</form>
       </div>
     </div>
   </div>
 </div>
-  </tbody>
-</table>
+
 </div>
+
 </body>
 </html>
