@@ -14,10 +14,10 @@
 <body>
 <?php
 require_once("dbconnect.php");
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);// включаем сообщения об ошибках
-$mysqli->set_charset("utf8mb4"); // задаем кодировку
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+$mysqli->set_charset("utf8mb4"); 
 
-$result = $mysqli->query('SELECT * FROM `users`'); // запрос на выборку
+$result = $mysqli->query('SELECT * FROM `users`'); 
 
 ?>
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -37,12 +37,11 @@ $result = $mysqli->query('SELECT * FROM `users`'); // запрос на выбо
   <tbody>
 
 <?php
-while($row = $result->fetch_assoc())// получаем все строки в цикле по одной
+while($row = $result->fetch_assoc())
 {
 echo '<tr>'.'<th scope="row">'.$row['ID'].'</th>'.'<td>'.$row['DATE'].'</td>'.'<td>'.$row['NAME'].'</td>'.'<td>'.$row['PHONE'].'</td>'.'<td>'.$row['MAIL'].'</td>';
-echo '<td>'.'<form method="POST">';
-echo '<input type="hidden" name="ID" value="'.$row['ID'].'">';
-echo '<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Удалить</button>'.'</form></td>'.'</tr>';// выводим данные
+echo '<td>';
+echo '<button value="'.$row['ID'].'" onclick="newVal(this)" type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Удалить</button>'.'</td>'.'</tr>';// выводим данные
 }
 $mysqli->close();
 ?>  
@@ -63,9 +62,9 @@ $mysqli->close();
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">НЕТ</button>
         <form action="delete.php" method="post">
-        <input type="hidden" name="ID" value="<?php echo $_POST['ID']; ?>">
+        <input id="butOk" type="hidden" name="ID" value="">
         
-        <input type="input" type="submit" value="Удалить" class="btn btn-warning">
+        <button type="input" type="submit" class="btn btn-warning">Удалить</button>
 </form>
       </div>
     </div>
@@ -73,6 +72,10 @@ $mysqli->close();
 </div>
 
 </div>
+<script type="text/javascript"> 
 
+function newVal(t){ var res = $(t).attr('value'); $('#butOk').val(res); return false; }
+
+</script>
 </body>
 </html>
