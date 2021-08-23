@@ -30,7 +30,140 @@
       "lmtime": 0,
       "modified": false
     },
-    "domains": {},
+    "domains": {
+      "psitest.ml": {
+        "public_html": {
+          "lend": {},
+          "strtest": {
+            "fonts": {},
+            "global.php": {
+              "type": "-",
+              "size": 421,
+              "lmtime": 0,
+              "modified": false
+            },
+            "img": {},
+            "index.php": {
+              "type": "-",
+              "size": 3759,
+              "lmtime": 1628093423820,
+              "modified": false
+            },
+            "policy.html": {
+              "type": "-",
+              "size": 32326,
+              "lmtime": 0,
+              "modified": false
+            },
+            "style.css": {
+              "type": "-",
+              "size": 4650,
+              "lmtime": 0,
+              "modified": false
+            },
+            "subtest": {
+              "dbconnect.php": {
+                "type": "-",
+                "size": 1196,
+                "lmtime": 0,
+                "modified": false
+              },
+              "delete.php": {
+                "type": "-",
+                "size": 244,
+                "lmtime": 1628600434359,
+                "modified": false
+              },
+              "fonts": {},
+              "index.php": {
+                "type": "-",
+                "size": 1797,
+                "lmtime": 0,
+                "modified": false
+              },
+              "register.php": {
+                "type": "-",
+                "size": 475,
+                "lmtime": 0,
+                "modified": false
+              },
+              "result.php": {
+                "type": "-",
+                "size": 3092,
+                "lmtime": 1628611033426,
+                "modified": false
+              },
+              "style-result.css": {
+                "type": "-",
+                "size": 157,
+                "lmtime": 1628501076053,
+                "modified": false
+              },
+              "style.css": {
+                "type": "-",
+                "size": 1724,
+                "lmtime": 0,
+                "modified": false
+              }
+            }
+          },
+          "test": {
+            "fonts": {},
+            "funcresult.php": {
+              "type": "-",
+              "size": 64,
+              "lmtime": 1628697245275,
+              "modified": false
+            },
+            "img": {},
+            "index.html": {
+              "type": "-",
+              "size": 120579,
+              "lmtime": 1628697372309,
+              "modified": false
+            },
+            "js": {
+              "script.js": {
+                "type": "-",
+                "size": 18549,
+                "lmtime": 0,
+                "modified": false
+              },
+              "script_stat.js": {
+                "type": "-",
+                "size": 3763,
+                "lmtime": 0,
+                "modified": false
+              },
+              "sendtophp.js": {
+                "type": "-",
+                "size": 673,
+                "lmtime": 1628697501687,
+                "modified": false
+              },
+              "telo.js": {
+                "type": "-",
+                "size": 2292,
+                "lmtime": 0,
+                "modified": false
+              },
+              "testall.js": {
+                "type": "-",
+                "size": 95,
+                "lmtime": 0,
+                "modified": false
+              }
+            },
+            "style.css": {
+              "type": "-",
+              "size": 7939,
+              "lmtime": 0,
+              "modified": false
+            }
+          }
+        }
+      }
+    },
     "test": {},
     "tmp": {}
   },

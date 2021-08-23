@@ -1,17 +1,19 @@
-var testing = 20; // вот эта переменная 
- 
+function sendtophp(){
+    let testing1 = parseInt(document.getElementById("testing1").innerHTML);
+    let testing2 = parseInt(document.getElementById("testing2").innerHTML);
+    let testing3 = parseInt(document.getElementById("testing3").innerHTML);
+    let testing4 = parseInt(document.getElementById("testing4").innerHTML);
+    let testing5 = parseInt(document.getElementById("testing5").innerHTML);
+    
 $.ajax({
-    type: "POST", // метод
-    url: "../test/funcresult.php", // скрипт который получит отправление
-    dataType: "json", // тип послания
-    data: { // тут создаем json со значением которое нужно
-        o: testing
-    },
-    success: function (data) { // необязательная функция, срабатывает при успехе
-       alert('Success');
-
-    },
-    error: function () {// необязательная функция, срабатывает при неудаче
-     alert('Error');
+    type: "POST",
+    url: '../test/funcresult.php',
+    data: { 
+        'testing1': testing1,
+        'testing2': testing2,
+        'testing3': testing3,
+        'testing4': testing4,
+        'testing5': testing5,
     }
 });
+}
