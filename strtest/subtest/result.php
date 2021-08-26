@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
 <?php
@@ -21,7 +22,7 @@ $result = $mysqli->query('SELECT * FROM `users`');
 
 ?>
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Пациенты</a>
+  <a class="navbar-brand" href="#">Абитуриенты</a>
 </nav>
 <table class="table table-hover table-dark pacient">
   <thead>
@@ -31,6 +32,7 @@ $result = $mysqli->query('SELECT * FROM `users`');
       <th scope="col">Имя</th>
       <th scope="col">Телефон</th>
       <th scope="col">Почта</th>
+      <th scope="col">Результат теста</th>
       <th scope="col">Действие</th>
     </tr>
   </thead>
@@ -39,10 +41,21 @@ $result = $mysqli->query('SELECT * FROM `users`');
 <?php
 while($row = $result->fetch_assoc())
 {
-echo '<tr>'.'<th scope="row">'.$row['ID'].'</th>'.'<td>'.$row['DATE'].'</td>'.'<td>'.$row['NAME'].'</td>'.'<td>'.$row['PHONE'].'</td>'.'<td>'.$row['MAIL'].'</td>';
+echo '<tr>'.'<th scope="row">'.$row['ID'].'</th>'.'<td>'.$row['DATE'].'</td>'.'<td>'.$row['NAME'].'</td>'.'<td>'.$row['PHONE'].'</td>'.'<td>'.$row['MAIL'].'</td>'.'<td>';
+
+$result2 = $mysqli->query('SELECT * FROM `results` WHERE id = "'.$row['RESULT_ID'].'"'); 
+while($row3 = $result2->fetch_assoc()){
+  echo $row3['pok'];
+  echo $row3['unig'];
+  echo $row3['nespr'];
+  echo $row3['pred'];
+  echo $row3['otverg'];
+};
+
+echo '</td>';
 echo '<td>';
-echo '<button value="'.$row['ID'].'" onclick="newVal(this)" type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Удалить</button>'.'</td>'.'</tr>';// выводим данные
-}
+echo '<button value="'.$row['ID'].'" onclick="newVal(this)" type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Удалить</button>'.'</td>'.'</tr>';
+};
 $mysqli->close();
 ?>  
 </tbody>
@@ -57,7 +70,7 @@ $mysqli->close();
         </button>
       </div>
       <div class="modal-body">
-        ...
+        Вы действительно хотите удалить? Восстановить будет невозможно!
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">НЕТ</button>
