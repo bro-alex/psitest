@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-<script src="https://d3js.org/d3.v7.min.js"></script>
+
 </head>
 <body>
 <?php
@@ -45,12 +45,22 @@ echo '<tr>'.'<th scope="row">'.$row['ID'].'</th>'.'<td>'.$row['DATE'].'</td>'.'<
 
 $result2 = $mysqli->query('SELECT * FROM `results` WHERE id = "'.$row['RESULT_ID'].'"'); 
 while($row3 = $result2->fetch_assoc()){
-  echo $row3['pok'];
-  echo $row3['unig'];
-  echo $row3['nespr'];
-  echo $row3['pred'];
-  echo $row3['otverg'];
-};
+  $numbers = array(
+  'П:'=>$row3['pok'],
+  'У:'=>$row3['unig'], 
+  'Н:'=>$row3['nespr'], 
+  'Пр:'=>$row3['pred'], 
+  'О:'=>$row3['otverg']
+);
+
+  arsort($numbers);
+  
+  foreach($numbers as $x => $x_value) {
+   echo '<span class="bgcolorResult">' . $x . ' ' . '</span>' . '<span class="bgcolorResult2">' . $x_value . '</span>';
+ 
+  }
+}
+
 
 echo '</td>';
 echo '<td>';

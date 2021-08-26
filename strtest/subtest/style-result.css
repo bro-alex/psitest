@@ -10,3 +10,18 @@ a.text {
 .pacient {
     margin-top: 50px;
 }
+
+.bgcolorResult {
+  background-color: brown;
+  margin-left: 5%;
+  border-radius: 30%;
+  padding: 1%;
+  
+}
+
+.bgcolorResult2{
+  background-color: rosybrown;
+  margin-left: 1%;
+  border-radius: 30%;
+  padding: 1%;
+}
